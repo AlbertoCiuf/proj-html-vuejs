@@ -20,6 +20,13 @@ ul {
   list-style: none;
 }
 
+.border-bottom {
+  width: 100%;
+  height: 1px;
+  background-color: lighten(#8492A6, 30);
+}
+
+
 .label {
   display: inline-block;
   background-color: $menu-light-bg;

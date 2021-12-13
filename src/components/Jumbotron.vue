@@ -3,6 +3,9 @@
     <div class="container">
       <!-- jumbo-top -->
       <div class="jumbo-top">
+        <div class="settings">
+          <i class="fas fa-cog"></i>
+        </div>
         <div class="intro">
           <div class="label">Development</div>
           <h2>A Complete Developer Toolset</h2>
@@ -15,12 +18,22 @@
           <img src="../assets/img/about.png" alt="About">
         </div>
       </div>
-      
+    </div>
+      <div class="border-bottom"></div>
       <!-- jumbo bottom collegamenti -->
-      <div class="jumbo-bottom">
-        jbot
-    </div>
-    </div>
+      <div class="container bot">
+        <div class="jumbo-bottom">
+          <ul>
+            <li><img src="../assets/img/amazon.svg" alt=""></li>
+            <li><img src="../assets/img/google.svg" alt=""></li>
+            <li><img src="../assets/img/lenovo.svg" alt=""></li>
+            <li><img src="../assets/img/paypal.svg" alt=""></li>
+            <li><img src="../assets/img/shopify.svg" alt=""></li>
+            <li><img src="../assets/img/spotify.svg" alt=""></li>
+
+          </ul>
+        </div>
+      </div>
   </section>
 </template>
 
@@ -39,10 +52,36 @@ export default {
       padding-top: 50px;
       width: 60%;
       margin: 0 auto;
+      &.bot {
+        padding: 0 !important;
+      }
       .jumbo-top {
+        position: relative;
         display: flex;
         align-items: center;
         height: 500px;
+        margin-bottom: 100px;
+        .settings {
+          cursor: pointer;
+          position: absolute;
+          top: 0;
+          left: -385px;
+          width: 40px;
+          height: 35px;
+          background-color: #fff;
+          border-radius: 0 50% 50% 0;
+          border: 1px solid lighten(#8492A6, 30);
+          transition: all .3s;
+          i.fa-cog {
+            color: $active-link-color;
+            font-size: 20px;
+            padding-left: 10px;
+            line-height: 35px;
+          }
+          &:hover{
+            transform: scale(1.2);
+          }
+        }
         .intro {
           width: 50%;
           margin-right: 30px;
@@ -71,6 +110,21 @@ export default {
           width: 90%;
           }
         } 
+      }
+      
+      .jumbo-bottom {
+        height: 100px;
+        ul {
+          display: flex;
+          height: 100%;
+          align-items: center;
+          li {
+            width: calc(100%/6 - 10px);
+            img {
+              height: 30px;
+            }
+          }
+        }
       }
     }
   }
