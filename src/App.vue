@@ -7,11 +7,8 @@
     <Jumbotron />  
 
     <!-- main -->
-      <!-- sect key features -->
-      <!-- sect quickstart -->
-      <!-- sect build tools -->
-      <!-- sect plans -->
-      <!-- sect newsletter -->
+    <Main />
+      
     <!-- footer social, links, newsletter -->
     <!-- footer bot -->
   </div>
@@ -21,12 +18,14 @@
 
 import Header from './components/Header.vue'
 import Jumbotron from './components/Jumbotron.vue'
+import Main from './components/Main.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-    Jumbotron
+    Jumbotron,
+    Main
   }
 }
 </script>
