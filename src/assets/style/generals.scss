@@ -26,6 +26,12 @@ ul {
   background-color: lighten(#8492A6, 30);
 }
 
+.rounded-borders {
+  height: 40px;
+  background-color: $bg-color;
+  border-radius: 0 0 80% 80%;
+}
+
 
 .label {
   display: inline-block;

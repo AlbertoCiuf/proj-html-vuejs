@@ -1,4 +1,6 @@
 <template>
+<div class="wrapper">
+
   <section class="jumbotron">
     <div class="container">
       <!-- jumbo-top -->
@@ -35,6 +37,8 @@
         </div>
       </div>
   </section>
+  <div class="rounded-borders"></div>
+</div>
 </template>
 
 <script>
@@ -48,12 +52,14 @@ export default {
 
   section.jumbotron {
     background-color: $bg-color;
+
     .container {
       padding-top: 50px;
       width: 60%;
       margin: 0 auto;
+
       &.bot {
-        padding: 0 !important;
+        padding: 0;
       }
       .jumbo-top {
         position: relative;
@@ -113,11 +119,11 @@ export default {
       }
       
       .jumbo-bottom {
-        height: 100px;
+        height: 70px;
         ul {
           display: flex;
           height: 100%;
-          align-items: center;
+          padding-top: 35px;
           li {
             width: calc(100%/6 - 10px);
             img {
@@ -128,4 +134,5 @@ export default {
       }
     }
   }
+    
 </style>
