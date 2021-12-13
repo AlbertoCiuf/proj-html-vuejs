@@ -1,9 +1,11 @@
 <template>
   <div id="app">
     <!-- header logo, nav, icons -->
-    <Header/>
-    <!-- jumbo-top -->
-    <!-- jumbo bottom collegamenti -->
+    <Header />
+
+    <!-- jumbotron -->
+    <Jumbotron />  
+
     <!-- main -->
       <!-- sect key features -->
       <!-- sect quickstart -->
@@ -18,11 +20,13 @@
 <script>
 
 import Header from './components/Header.vue'
+import Jumbotron from './components/Jumbotron.vue'
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    Jumbotron
   }
 }
 </script>
