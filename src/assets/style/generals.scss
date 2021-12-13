@@ -1,0 +1,20 @@
+@import '~@fontsource/source-sans-3/index.css';
+@import '~@fontsource/source-sans-3/700.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Sans 3";
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
