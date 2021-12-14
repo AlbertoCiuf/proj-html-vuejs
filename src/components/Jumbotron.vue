@@ -123,10 +123,10 @@ export default {
         height: 70px;
         ul {
           display: flex;
+          justify-content: space-between;
           height: 100%;
           padding-top: 35px;
           li {
-            width: calc(100%/6 - 10px);
             img {
               height: 30px;
             }

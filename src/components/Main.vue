@@ -45,7 +45,25 @@
           </div>
         </div>
       </section>
+
       <!-- sect build tools -->
+      <section class="build-tools">
+        <div class="bt-left-info">
+          <h2>Build tools and extensive documention</h2>
+          <p>You can combine all the Landrick templates into a singole one, you can take a component from the Application Theme and use it in the Website</p>
+          <ul>
+            <li><i class="far fa-check-circle"></i>Digital Marketing Solutions for Tomorrow</li>
+            <li><i class="far fa-check-circle"></i>Our Talented & Experienced Marketing Agency</li>
+            <li><i class="far fa-check-circle"></i>Create your own skin to match your brand</li>
+          </ul>
+          <div class="btn btn-dark">
+            Read More <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+        <div class="bt-right-image">
+          <img src="../assets/img/1.png" alt="">
+        </div>
+      </section>
       <!-- sect plans -->
       <!-- sect newsletter -->
 
@@ -165,6 +183,45 @@ export default {
               color: #2ECA8B;
             }
           }
+        }
+      }
+    }
+    section.build-tools {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 100px;
+      .bt-left-info {
+        width: 50%;
+        margin-right: 50px;
+        h2 {
+          width: 65%;
+          padding: 0;
+        }
+        p {
+          padding: 30px 0;
+        }
+        p, li {
+          color: $light-text-color;
+        }
+        li {
+          padding: 5px 0;
+          i {
+          color: $active-link-color;
+          padding-right: 10px;
+          }
+        }
+        .btn {
+          margin: 20px 0;
+          i {
+            font-size: 12px;
+          }
+        }
+      }
+      .bt-right-image {
+        width: 40%;
+        img {
+          width: 80%;
         }
       }
     }
