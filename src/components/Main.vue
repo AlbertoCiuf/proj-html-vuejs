@@ -8,10 +8,9 @@
           <p>Start working with <span class="blue">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
         </div>
         <div class="kf-cards">
-          <KeyfeaturesCard />
-          <KeyfeaturesCard />
-          <KeyfeaturesCard />
-          <KeyfeaturesCard />
+          <KeyfeaturesCard 
+          v-for="(card, index) in kfCardInfo" :key="`kfCard${index}`"
+          :cardInfo="card" />
         </div>
       </section>
       <!-- sect quickstart -->
@@ -31,6 +30,24 @@ export default {
   name: 'Main',
   components: {
     KeyfeaturesCard
+  },
+  data(){
+    return{
+      kfCardInfo: [
+        {
+          icon: 'modular'
+        },
+        {
+          icon: 'responsive'
+        },
+        {
+          icon: 'customizable'
+        },
+        {
+          icon: 'scalable'
+        }
+      ]
+    }
   }
 }
 </script>
@@ -51,7 +68,7 @@ export default {
           font-weight: 400;
         }
         p {
-          color: #8492A6;
+          color: $light-text-color;
           .blue {
             color: $menu-dark-bg;
           }
@@ -60,7 +77,7 @@ export default {
       }
       .kf-cards {
         display: flex;
-        gap: 20px;
+        gap: 30px;
       }
     }
   }

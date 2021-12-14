@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- header logo, nav, icons -->
-    <Header />
+    <Header :navLinkList="navLinks"/>
 
     <!-- jumbotron -->
     <Jumbotron />  
@@ -22,6 +22,36 @@ import Main from './components/Main.vue'
 
 export default {
   name: 'App',
+  data(){
+    return {
+      navLinks: [
+        {
+          name: 'home',
+          isActive: false,
+          isDropDown: false,
+          href: '#'
+        },
+        {
+          name: 'landing',
+          isActive: true,
+          isDropDown: true,
+          href: '#'
+        },
+        {
+          name: 'pages',
+          isActive: false,
+          isDropDown: true,
+          href: '#'
+        },
+        {
+          name: 'docs',
+          isActive: false,
+          isDropDown: true,
+          href: '#'
+        },
+      ]
+    }
+  },
   components: {
     Header,
     Jumbotron,

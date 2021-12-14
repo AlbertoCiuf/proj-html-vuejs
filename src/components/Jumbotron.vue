@@ -77,7 +77,7 @@ export default {
           height: 35px;
           background-color: #fff;
           border-radius: 0 50% 50% 0;
-          border: 1px solid lighten(#8492A6, 30);
+          border: 1px solid lighten($light-text-color, 30);
           transition: all .3s;
           i.fa-cog {
             color: $active-link-color;
@@ -100,7 +100,7 @@ export default {
             margin-left: 0;
           }
           p, small {
-            color: #8492A6;
+            color: $light-text-color;
           }
           p {
             font-size: 18px;

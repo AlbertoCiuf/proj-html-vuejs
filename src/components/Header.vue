@@ -6,10 +6,10 @@
       </div>
       <nav>
         <ul>
-          <li v-for="(link, index) in navLinks" :key="`link${index}`"
+          <li v-for="(link, index) in navLinkList" :key="`link${index}`"
             :class="{active : link.isActive}"
             @click="link.isActive = !link.isActive">
-            {{link.name}}
+            <a :href="link.href">{{link.name}}</a>
             <i class="fas fa-chevron-down"
               :class="{shown : link.isDropDown}"></i>
           </li>
@@ -30,32 +30,9 @@
 <script>
 export default {
   name: 'Header',
-  data(){
-    return {
-      navLinks: [
-        {
-          name: 'home',
-          isActive: false,
-          isDropDown: false
-        },
-        {
-          name: 'landing',
-          isActive: true,
-          isDropDown: true
-        },
-        {
-          name: 'pages',
-          isActive: false,
-          isDropDown: true
-        },
-        {
-          name: 'docs',
-          isActive: false,
-          isDropDown: true
-        },
-      ]
-    }
-  },
+  props: {
+    navLinkList: Array
+  }
 }
 </script>
 
@@ -106,7 +83,7 @@ header {
           align-items: center;
           li {
             cursor: pointer;
-            color: #8492A6;
+            color: $light-text-color;
             padding: 5px 10px;
             margin: 5px;
             font-size: 14px;
