@@ -25,20 +25,24 @@
           </h2>
           <p>Start working with <span class="blue">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
         </div>
-        <div class="qs-graph">
-          <ul>
-            <li>npm</li>
-            <li>nuget</li>
-            <li>spm</li>
-            <li>github</li>
-          </ul>
-          <div class="graph-cmd"></div>
-        </div>
-        <div class="perks">
-          <ul>
-            <li>Organize your data</li>
-            <li>Work with any team</li>
-          </ul>
+        <div class="graph-wrapper">
+          <div class="qs-graph">
+            <ul>
+              <li>npm</li>
+              <li>nuget</li>
+              <li>spm</li>
+              <li>github</li>
+            </ul>
+            <div class="graph-cmd">
+              <p><span class="green">$</span> npm install <span class="green">-g</span> claps.js</p>
+            </div>
+          </div>
+          <div class="perks">
+            <ul>
+              <li><i class="far fa-check-circle"></i>Organize your data</li>
+              <li><i class="far fa-check-circle"></i>Work with any team</li>
+            </ul>
+          </div>
         </div>
       </section>
       <!-- sect build tools -->
@@ -119,6 +123,48 @@ export default {
         p {
           color: $light-text-color;
           padding-bottom: 50px;
+        }
+      }
+      .qs-graph {
+        background-color: $blueish-dark-bg;
+        padding: 20px;
+        border-radius: 5px;
+        ul {
+          display: flex;
+          background-color: $dark-grey-bg;
+          border: 1px solid $dark-grey-bg;
+          border-radius: 5px;
+          li {
+            padding: 5px 60px;
+            color: #fff;
+            font-size: 18px;
+            &:first-child {
+              background-color: $blueish-dark-bg;
+              border-radius: 5px;
+            }
+          }
+        }
+        .graph-cmd {
+          p {
+            color: lighten($dark-grey-bg, 30);
+            padding: 10px 0;
+            span.green {
+              color: #2ECA8B;
+            }
+          }
+        }
+      }
+      .perks {
+        ul  {
+          display: flex;
+          li {
+            padding: 10px 50px 0 0;
+            color: $light-text-color;
+            i {
+              padding-right: 5px;
+              color: #2ECA8B;
+            }
+          }
         }
       }
     }
