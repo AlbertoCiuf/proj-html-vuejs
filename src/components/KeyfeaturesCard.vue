@@ -1,16 +1,16 @@
 <template>
   <div class="kf-card">
     <div class="icon">
-      <i v-if="cardInfo.icon==='modular'" class="fas fa-layer-group"></i>
+      <i v-if="cardInfo==='modular'" class="fas fa-layer-group"></i>
 
-      <i v-else-if="cardInfo.icon==='responsive'" class="fas fa-external-link-alt"></i>
+      <i v-else-if="cardInfo==='responsive'" class="fas fa-external-link-alt"></i>
 
-      <i v-else-if="cardInfo.icon==='customizable'" class="far fa-plus-square"></i>
+      <i v-else-if="cardInfo==='customizable'" class="far fa-plus-square"></i>
 
       <i v-else class="fas fa-expand-arrows-alt"></i>
     </div>
     <div class="card-title">
-      <h4>{{cardInfo.icon}}</h4>
+      <h4>{{cardInfo}}</h4>
     </div>
     <div class="description">
       Composed in a pseudo-Latin language which more or less corresponds.
@@ -25,7 +25,7 @@
 export default {
   name: 'KeyfeaturesCard',
   props: {
-    cardInfo: Object
+    cardInfo: String
   }
 }
 </script>
@@ -35,7 +35,6 @@ export default {
 
   .kf-card {
     width: calc(100% / 4);
-    // min-width: 250px;
     border: 1px solid lighten($light-text-color, 30);
     border-radius: 5px;
     padding: 15px;

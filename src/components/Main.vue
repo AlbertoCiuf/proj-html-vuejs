@@ -64,11 +64,19 @@
           <img src="../assets/img/1.png" alt="">
         </div>
       </section>
-      <div class="rates">
+      <div class="mid-section-rates">
         <h2>Our rates for developer from landrick team</h2>
         <p>Start working with <span class="blue">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
       </div>
+
       <!-- sect plans -->
+      <section class="plans">
+        <PlansCard 
+        v-for="(item, index) in plansCardInfo" 
+        :key="`plansCard${index}`"
+        :cardInfo="item"/>
+      </section>
+      
       <!-- sect newsletter -->
 
     </div>
@@ -78,27 +86,41 @@
 <script>
 
 import KeyfeaturesCard from './KeyfeaturesCard.vue'
+import PlansCard from './PlansCard.vue'
 
 export default {
   name: 'Main',
   components: {
-    KeyfeaturesCard
+    KeyfeaturesCard,
+    PlansCard
   },
   data(){
     return{
       kfCardInfo: [
+        'modular',
+        'responsive',
+        'customizable',
+        'scalable'
+      ],
+      plansCardInfo: [
         {
-          icon: 'modular'
+          label: 'Basic',
+          price: '9.00',
+          description: 'All the basics for businesses that are just getting started.',
+          isBestDeal: false
         },
         {
-          icon: 'responsive'
+          label: 'Business',
+          price: '39.00',
+          description: 'Better for growing businesses that want more customers.',
+          isBestDeal: true
         },
         {
-          icon: 'customizable'
+          label: 'Enterprise',
+          price: '79.00',
+          description: 'Advanced features for pros who need more customization.',
+          isBestDeal: false
         },
-        {
-          icon: 'scalable'
-        }
       ]
     }
   }
@@ -223,14 +245,23 @@ export default {
         }
       }
       .bt-right-image {
-        // width: 40%;
         img {
           width: 500px;
         }
       }
     }
-    .rates {
-      padding-top: 60px;
+    .mid-section-rates {
+      width: 60%;
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 70px;
+      p {
+        color: $light-text-color;
+      }
+    }
+    section.plans {
+      display: flex;
+      gap: 30px;
     }
   }
 </style>
