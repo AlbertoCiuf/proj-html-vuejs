@@ -64,6 +64,10 @@
           <img src="../assets/img/1.png" alt="">
         </div>
       </section>
+      <div class="rates">
+        <h2>Our rates for developer from landrick team</h2>
+        <p>Start working with <span class="blue">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
+      </div>
       <!-- sect plans -->
       <!-- sect newsletter -->
 
@@ -219,11 +223,14 @@ export default {
         }
       }
       .bt-right-image {
-        width: 40%;
+        // width: 40%;
         img {
-          width: 80%;
+          width: 500px;
         }
       }
+    }
+    .rates {
+      padding-top: 60px;
     }
   }
 </style>
