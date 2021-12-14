@@ -76,8 +76,16 @@
         :key="`plansCard${index}`"
         :cardInfo="item"/>
       </section>
-      
+
       <!-- sect newsletter -->
+      <section class="newsletter">
+        <h2>Want to be among the first to find out?</h2>
+        <p>Start working with <span class="blue">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
+        <div class="input-wrapper">
+          <input type="text" placeholder="Email Address">
+          <div class="btn btn-dark">Get Started</div>
+        </div>
+      </section>
 
     </div>
   </main>
@@ -250,7 +258,7 @@ export default {
         }
       }
     }
-    .mid-section-rates {
+    .mid-section-rates, section.newsletter {
       width: 60%;
       margin: 0 auto;
       text-align: center;
@@ -262,6 +270,30 @@ export default {
     section.plans {
       display: flex;
       gap: 30px;
+    }
+    section.newsletter {
+      padding-top: 0;
+      padding-bottom: 30px;
+      .input-wrapper{
+        position: relative;
+        margin: 35px 0 70px 0;
+      }
+      input {
+        width: 100%;
+        height: 50px;
+        border-radius: 25px;
+        border: 1px solid lighten($light-text-color, 20);
+        padding: 10px;
+      }
+      .btn {
+        border-radius: 20px;
+        position: absolute;
+        height: 40px;
+        line-height: 40px;
+        padding-top: 0;
+        right: -5px;
+        top: 5px;
+      }
     }
   }
 </style>
