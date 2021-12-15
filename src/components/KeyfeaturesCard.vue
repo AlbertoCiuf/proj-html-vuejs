@@ -38,6 +38,12 @@ export default {
     border: 1px solid lighten($light-text-color, 30);
     border-radius: 5px;
     padding: 15px;
+    transition: all .3s;
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 2px 8px $light-text-color;
+      border-bottom: 3px solid $active-link-color;
+    }
     .icon i {
       font-size:20px;
       background-color: $menu-light-bg;

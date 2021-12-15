@@ -54,6 +54,9 @@ ul {
     background-color: $menu-dark-bg;
     color: #fff;
     box-shadow: 0 3px 5px $menu-dark-bg;
+    &:hover {
+      filter: brightness(1.1);
+    }
   }
   &.btn-light {
     color: $active-link-color;
