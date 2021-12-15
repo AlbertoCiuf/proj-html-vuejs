@@ -47,7 +47,7 @@ export default {
   border-bottom: 4px solid lighten($light-text-color,20);
   margin-bottom: 100px;
   margin-top: 60px;
-  transition: all .2s;
+  transition: transform .3s;
   &:hover {
     transform: scale(1.1);
     border-bottom: 4px solid $active-link-color;
@@ -74,10 +74,6 @@ export default {
       background-color: #F17425;
       transform: rotate(45deg);
       box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
-      // &::before, &::after {
-      //   content: '';
-      //   border: 3px solid #F17425;
-      // }
     }
   }
   p, small, li {
