@@ -43,9 +43,15 @@ export default {
   border: 1px solid lighten($light-text-color, 30);
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 5px 5px $light-text-color;
+  box-shadow: 0 2px 5px $light-text-color;
+  border-bottom: 4px solid lighten($light-text-color,20);
   margin-bottom: 100px;
   margin-top: 60px;
+  transition: all .2s;
+  &:hover {
+    transform: scale(1.1);
+    border-bottom: 4px solid $active-link-color;
+  }
   .ribbon-wrapper {
     display: none;
     position: absolute;
