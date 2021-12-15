@@ -68,10 +68,22 @@
     <div class="border-bottom"></div>
 
     <!-- footer bot -->
-    <div class="footer-bottom">
-      <div class="container">
-        aaa
+    <div class="container">
+      <div class="footer-bottom">
+        <div class="copyright">
+          <p>&copy; 2020 Landrick. Design with <span class="red"><i class="fas fa-heart"></i></span> by Shreethemes.</p>
+        </div>
+        <div class="payments">
+          <img src="../assets/img/american-ex.png" alt="american express">
+          <img src="../assets/img/discover.png" alt="discover">
+          <img src="../assets/img/master-card.png" alt="master card">
+          <img src="../assets/img/paypal.png" alt="paypal">
+          <img src="../assets/img/visa.png" alt="visa">
+        </div>
       </div>
+    </div>
+    <div class="go-top" @click="goTop">
+      <i class="fas fa-arrow-up"></i>
     </div>
   </footer>
 </template>
@@ -79,6 +91,15 @@
 <script>
 export default {
   name: 'Footer',
+  methods: {
+    goTop(){
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+  }
 }
 </script>
 
@@ -87,9 +108,13 @@ export default {
 
 footer {
   background-color: #1F2942;
+  position: relative;
   .container {
     width: 60%;
     margin: 0 auto;
+    span.red {
+      color: #E43F52;
+    }
     .footer-top {
       display: flex;
       justify-content: space-between;
@@ -102,9 +127,6 @@ footer {
       }
       p, i, strong {
         color: $light-text-color;
-      }
-      span.red {
-        color: #E43F52;
       }
       .social-area {
         width: calc(100% / 3);
@@ -122,6 +144,12 @@ footer {
           border-radius: 5px;
           padding: 8px 10px;
           margin-right: 5px;
+          cursor: pointer;
+          transition: all .2s;
+          &:hover{
+            color: #fff;
+            background-color: $light-text-color;
+           }
          }
         } 
       }
@@ -131,6 +159,16 @@ footer {
         gap: 70px;
         ul li {
           color: $light-text-color;
+          &::before {
+            content: '\f054';
+            font-weight: 900;
+            font-family: 'Font Awesome 5 Free';
+            padding-right: 5px;
+            font-size: 10px;
+          }
+          &:hover{
+            color: #fff;
+          }
         }
       }
       .f-newsletter {
@@ -181,8 +219,45 @@ footer {
         }
       }
     }
+
+    .footer-bottom {
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .copyright p {
+        color: $light-text-color;
+        .red i {
+          font-size: 14px;
+        }
+      }
+      .payments img {
+        width: 30px;
+        vertical-align: middle;
+        border: 1px solid black;
+        margin: 1px;
+      }
+    }
   }
-  
+  .go-top i {
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+    background-color: $active-link-color;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all .2s;
+    &:hover{
+      transform: scale(1.2);
+    }
+  }
+  .border-bottom {
+    background-color: darken($light-text-color,30);
+  }
+
 }
 
 </style>
