@@ -10,7 +10,10 @@
     <Main />
     
     <!-- footer -->
-    <Footer />  
+    <Footer 
+      :companyLinks="footerCompanyLinks"
+      :usefulLinks="footerUsefulLinks"
+    />  
   </div>
 </template>
 
@@ -49,6 +52,62 @@ export default {
           isActive: false,
           isDropDown: true,
           href: '#'
+        },
+      ],
+      footerCompanyLinks: [
+        {
+          name:'About us',
+          href:'#'
+        },
+        {
+          name:'Services',
+          href:'#'
+        },
+        {
+          name:'Team',
+          href:'#'
+        },
+        {
+          name:'Pricing',
+          href:'#'
+        },
+        {
+          name:'Project',
+          href:'#'
+        },
+        {
+          name:'Careers',
+          href:'#'
+        },
+        {
+          name:'Blog',
+          href:'#'
+        },
+        {
+          name:'Login',
+          href:'#'
+        },
+      ],
+      footerUsefulLinks: [
+        {
+          name:'Terms of Services',
+          href:'#'
+        },
+        {
+          name:'Privacy Policy',
+          href:'#'
+        },
+        {
+          name:'Documentation',
+          href:'#'
+        },
+        {
+          name:'Changelog',
+          href:'#'
+        },
+        {
+          name:'Components',
+          href:'#'
         },
       ]
     }

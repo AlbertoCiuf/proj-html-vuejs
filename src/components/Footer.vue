@@ -20,35 +20,18 @@
           <div class="company">
             <h3>Company</h3>
             <ul>
-              <li>link footer</li>
-              <li>link footer</li>
-              <li>link footer</li>
-              <li>link footer</li>
-              <li>link footer</li>
-              <li>link footer</li>
-              <li>link footer</li>
-              <li>link footer</li>
-              <li>link footer</li>
-              <li>link footer</li>
-              <li>link footer</li>
-              <li>link footer</li>
-              <li>link footer</li>
+              <li v-for="(link, index) in companyLinks" :key="`companyLink${index}`">
+                <a :href="link.href">{{link.name}}</a>
+              </li>
             </ul>
           </div>
 
           <div class="useful">
             <h3>Useful links</h3>
             <ul>
-              <li>link footer</li>
-              <li>link footer</li>
-              <li>link footer</li>
-              <li>link footer</li>
-              <li>link footer</li>
-              <li>link footer</li>
-              <li>link footer</li>
-              <li>link footer</li>
-              <li>link footer</li>
-              <li>link footer</li>
+              <li v-for="(link, index) in usefulLinks" :key="`useful${index}`">
+                <a :href="link.href">{{link.name}}</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -91,6 +74,10 @@
 <script>
 export default {
   name: 'Footer',
+  props: {
+    companyLinks: Array,
+    usefulLinks: Array
+  },
   methods: {
     goTop(){
       window.scroll({
@@ -159,6 +146,7 @@ footer {
         gap: 70px;
         ul li {
           color: $light-text-color;
+          padding: 5px 0;
           &::before {
             content: '\f054';
             font-weight: 900;
